@@ -1,0 +1,8 @@
+511. Game Play Analysis I
+Write an SQL query that reports the first login date for each player.
+
+# Write your MySQL query statement below
+SELECT player_id, MIN(event_date) AS first_login
+From Activity
+GROUP BY player_id
+ORDER BY player_id
