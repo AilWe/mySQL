@@ -1,0 +1,7 @@
+1173. Immediate Food Delivery I
+If the preferred delivery date of the customer is the same as the order date then the order is called immediate otherwise it's called scheduled.
+
+Write an SQL query to find the percentage of immediate orders in the table, rounded to 2 decimal places.
+# Write your MySQL query statement below
+SELECT ROUND(100*AVG(order_date = customer_pref_delivery_date),2) AS immediate_percentage
+FROM Delivery
