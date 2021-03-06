@@ -1,0 +1,6 @@
+1571. Warehouse Manager
+Write an SQL query to report, How much cubic feet of volume does the inventory occupy in each warehouse.
+# Write your MySQL query statement below
+SELECT name AS warehouse_name, SUM(units* Width * Length * Height)volume
+FROM Warehouse LEFT JOIN Products USING (product_id)
+GROUP BY name
